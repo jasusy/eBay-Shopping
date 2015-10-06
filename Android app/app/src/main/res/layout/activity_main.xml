@@ -1,0 +1,135 @@
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    tools:context=".MainActivity"
+    android:id="@+id/ebay_start"
+    android:background="@drawable/gradient3">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="#000066"
+        android:textStyle="bold"
+        android:textSize="25sp"
+        android:text="@string/ebay_title"
+        android:id="@+id/ebay_head"
+        android:layout_marginTop="56dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true" />
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/ebay_head"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="50dp"
+        android:id="@+id/linearLayout1">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/key_word_str"
+            android:layout_marginTop="15dp"
+            android:id="@+id/textView1" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="26dp"
+            android:text="@string/price_from_str"
+            android:id="@+id/textView2" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="26dp"
+            android:text="@string/price_to_str"
+            android:id="@+id/textView3" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="26dp"
+            android:text="@string/sort_by_str"
+            android:id="@+id/textView4" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/ebay_head"
+        android:layout_marginTop="50dp"
+        android:layout_toEndOf="@+id/linearLayout1"
+        android:layout_marginStart="30dp"
+        android:id="@+id/linearLayout">
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/keywordEditText"
+            android:singleLine="true"
+            android:layout_gravity="center_horizontal" />
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:singleLine="true"
+            android:id="@+id/priceFromEditText"
+            android:layout_gravity="center_horizontal" />
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:singleLine="true"
+            android:id="@+id/priceToEditText"
+            android:layout_gravity="end" />
+
+        <Spinner
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:id="@+id/sort_by"
+            android:spinnerMode="dropdown" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="20dp">
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/bt_clear"
+                android:text="Clear"/>
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/bt_search"
+                android:text="Search"/>
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/errorTextView"
+        android:layout_below="@+id/linearLayout"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:textColor="#800000"
+        android:textSize="15sp" />
+
+</RelativeLayout>
+

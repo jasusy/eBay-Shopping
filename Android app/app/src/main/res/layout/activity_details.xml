@@ -1,0 +1,350 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent" android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    tools:context="com.elasticbeanstalk.ebaysearch.DetailsActivity">
+
+<ScrollView
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content">
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <ImageView android:id="@+id/superPicture"
+            android:layout_width="fill_parent"
+            android:layout_height="200dp"/>
+
+        <TextView android:id="@+id/title_TextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#000000"/>
+        <TextView android:id="@+id/price_TextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textStyle="bold"/>
+        <TextView android:id="@+id/location_TextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="35dp"
+            android:layout_marginTop="10dp"
+            android:orientation="horizontal">
+
+            <ImageView android:id="@+id/details_TopRated"
+                android:layout_width="35dp"
+                android:layout_height="fill_parent"
+                android:layout_alignParentStart="true"
+                android:src="@drawable/toprated"
+                android:visibility="invisible"/>
+            <Button android:id="@+id/bt_details_BuyNow"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:padding="10dp"
+                android:textColor="#FFFFFF"
+                android:text="@string/buy_now"
+                android:background="@drawable/mybutton1"/>
+            <ImageButton android:id="@+id/bt_details_facebook"
+                android:layout_width="35dp"
+                android:layout_height="fill_parent"
+                android:layout_alignParentEnd="true"
+                android:padding="0dp"
+                android:scaleType="fitCenter"
+                android:src="@drawable/fb"/>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="25dp"
+            android:layout_marginTop="10dp"
+            android:orientation="horizontal">
+
+            <Button android:id="@+id/bt_details_BasicInfo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:text="@string/bt_basic_text"
+                android:background="@drawable/mybutton1"/>
+            <Button android:id="@+id/bt_details_Seller"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:text="@string/bt_seller_text"
+                android:background="@drawable/mybutton2"/>
+            <Button android:id="@+id/bt_details_Shipping"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:text="@string/bt_shipping_text"
+                android:background="@drawable/mybutton2"/>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content">
+            <LinearLayout android:id="@+id/basic_pad"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="visible">
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp">
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="4"
+                        android:text="@string/basic_cat"/>
+                    <TextView android:id="@+id/basic_pad_cat"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="6"/>
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp">
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="4"
+                        android:text="@string/basic_cond"/>
+                    <TextView android:id="@+id/basic_pad_cond"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="6"/>
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp">
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="4"
+                        android:text="@string/basic_buyf"/>
+                    <TextView android:id="@+id/basic_pad_buyf"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="6"/>
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout android:id="@+id/seller_pad"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="gone">
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp">
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="4"
+                        android:text="@string/Seller_user"/>
+                    <TextView android:id="@+id/seller_pad_user"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="6"/>
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp">
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="4"
+                        android:text="@string/Seller_score"/>
+                    <TextView android:id="@+id/seller_pad_score"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="6"/>
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp">
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="4"
+                        android:text="@string/Seller_pos"/>
+                    <TextView android:id="@+id/seller_pad_pos"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="6"/>
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp">
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="4"
+                        android:text="@string/Seller_rating"/>
+                    <TextView android:id="@+id/seller_pad_rating"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="6"/>
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp">
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="4"
+                        android:text="@string/Seller_topRated"/>
+                    <RelativeLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="-1dp"
+                        android:layout_weight="6">
+                        <ImageView android:id="@+id/seller_pad_topRated"
+                            android:layout_width="20dp"
+                            android:layout_height="20dp"
+                            android:layout_alignParentStart="true" />
+                    </RelativeLayout>
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp">
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="4"
+                        android:text="@string/Seller_store"/>
+                    <TextView android:id="@+id/seller_pad_store"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="6"/>
+                </LinearLayout>
+             </LinearLayout>
+
+            <LinearLayout android:id="@+id/shipping_pad"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="gone">
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp">
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="4"
+                        android:text="@string/ship_type"/>
+                    <TextView android:id="@+id/shipping_pad_type"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="6"/>
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp">
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="4"
+                        android:text="@string/ship_handle"/>
+                    <TextView android:id="@+id/shipping_pad_handle"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="6"/>
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp">
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="4"
+                        android:text="@string/ship_location"/>
+                    <TextView android:id="@+id/shipping_pad_location"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="6"/>
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp">
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="4"
+                        android:text="@string/ship_exped"/>
+                    <RelativeLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="-1dp"
+                        android:layout_weight="6">
+                        <ImageView android:id="@+id/shipping_pad_exped"
+                            android:layout_width="20dp"
+                            android:layout_height="20dp"
+                            android:layout_alignParentStart="true" />
+                    </RelativeLayout>
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp">
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="4"
+                        android:text="@string/ship_oneday"/>
+                    <RelativeLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="-1dp"
+                        android:layout_weight="6">
+                        <ImageView android:id="@+id/shipping_pad_oneday"
+                            android:layout_width="20dp"
+                            android:layout_height="20dp"
+                            android:layout_alignParentStart="true" />
+                    </RelativeLayout>
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp">
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="4"
+                        android:text="@string/ship_return"/>
+                    <RelativeLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="-1dp"
+                        android:layout_weight="6">
+                        <ImageView android:id="@+id/shipping_pad_return"
+                            android:layout_width="20dp"
+                            android:layout_height="20dp"
+                            android:layout_alignParentStart="true" />
+                    </RelativeLayout>
+                </LinearLayout>
+            </LinearLayout>
+
+        </RelativeLayout>
+
+    </LinearLayout>
+</ScrollView>
+</RelativeLayout>

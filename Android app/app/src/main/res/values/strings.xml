@@ -1,0 +1,49 @@
+<resources>
+    <string name="app_name">EbaySearch</string>
+    <string name="ebay_title">eBay Search</string>
+    <string name="action_settings">Settings</string>
+    <string name="key_word_str">Keyword</string>
+    <string name="price_from_str">Price From</string>
+    <string name="price_to_str">Price To</string>
+    <string name="sort_by_str">Sort by</string>
+
+    <string name="facebook_app_id">750095168444590</string>
+
+    <string-array name="sort_by_array">
+        <item>Best Match</item>
+        <item>Price: highest first</item>
+        <item>Price + Shipping: highest first</item>
+        <item>Price + Shipping: lowest first</item>
+    </string-array>
+
+    <string name="title_activity_result">ResultActivity</string>
+    <string name="title_activity_details">DetailsActivity</string>
+
+    <string name="basic_cat">Category Name</string>
+    <string name="basic_cond">Condition</string>
+    <string name="basic_buyf">Buying Format</string>
+
+    <string name="Seller_user">User Name</string>
+    <string name="Seller_score">FeedbackScore</string>
+    <string name="Seller_pos">Positive Feedback</string>
+    <string name="Seller_rating">Feedback Rating</string>
+    <string name="Seller_topRated">Top Rated</string>
+    <string name="Seller_store">Store</string>
+
+    <string name="ship_type">Shipping Type</string>
+    <string name="ship_handle">Handling Time</string>
+    <string name="ship_location">Shipping locations</string>
+    <string name="ship_exped">Expedited Shipping</string>
+    <string name="ship_oneday">One Day Shipping</string>
+    <string name="ship_return">Returns Accepted</string>
+    <string name="buy_now">Buy Now</string>
+    <string name="bt_basic_text">BASIC INFO</string>
+    <string name="bt_seller_text">SELLER</string>
+    <string name="bt_shipping_text">SHIPPING</string>
+
+    <string name="error_keyword_empty">The keyword must not be empty</string>
+    <string name="error_price_from">\"Price From\" must be a positive or decimal number</string>
+    <string name="error_price_to">\"Price To\" must be a positive integer or decimal number</string>
+    <string name="error_price_range">Price To must not be less than Price From</string>
+
+</resources>

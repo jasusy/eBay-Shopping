@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>eBay Shopping</title>
+<!-- Bootstrap -->
+<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css" rel="stylesheet">
+<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap-theme.min.css" rel="stylesheet">
+<!-- Custom css and js-->
+<link rel="stylesheet" type="text/css" href="searchform.css"> 
+<!--Input data validation-->
+</head>
+<body>
+<div id="headp">
+  <br>
+ <h2><img class="top" src="ebay.jpg">Shopping</h2>
+</div>
+
+<div id="searchp">
+  <form class="form-horizontal" id="register-form">
+    <div class="form-group">
+      <label for="keyword" class="control-label col-sm-2" style="padding-top:7px">Key words:<font color="Maroon">*</font></label>
+      <div class="col-sm-10">
+        <input type="text" name="keyword" id="keyword" class="form-control"  placeholder="Enter keyword">
+      </div>
+    </div>
+    <div class="form-group">
+      <label for="priceRange" class="control-label col-sm-2" style="padding-top:7px">Price range:</label>
+      <div id="priceRange">
+        <div class="col-sm-5">
+        <input type="text" name="minprice" id="minprice" class="form-control" placeholder="from ($)">
+        </div>
+        <div class="col-sm-5">
+        <input type="text" name="maxprice" id="maxprice" class="form-control" placeholder="to ($)"> 
+        </div>
+      </div>
+    </div>
+    <div class="form-group">
+      <label for="cond" class="control-label col-sm-2">Condition:</label>
+      <div class="col-sm-10" id="cond" style="padding-top:7px">
+        <label for="cond1"><input type=checkbox class="checkbox-inline" name="cond1" id="cond1" value="1000">&nbsp;New</label>&nbsp;&nbsp;
+        <label for="cond2"><input type=checkbox class="checkbox-inline" name="cond2" id="cond2" value="3000">&nbsp;Used</label>&nbsp;&nbsp;
+        <label for="cond3"><input type=checkbox class="checkbox-inline" name="cond3" id="cond3" value="4000">&nbsp;Very Good</label>&nbsp;&nbsp;
+        <label for="cond4"><input type=checkbox class="checkbox-inline" name="cond4" id="cond4" value="5000">&nbsp;Good</label>&nbsp;&nbsp;
+        <label for="cond5"><input type=checkbox class="checkbox-inline" name="cond5" id="cond5" value="6000">&nbsp; Acceptable</label>&nbsp;&nbsp;
+    </div>
+    </div>
+    <div class="form-group">
+      <label for="buyf" class="control-label col-sm-2">Buying formats:</label>
+      <div class="col-sm-10" id="buyf" style="padding-top:7px">
+        <label for="buyf1"><input type=checkbox class="checkbox-inline" name="buyf1" id="buyf1" value="FixedPrice">&nbsp;Buy It Now</label>&nbsp;&nbsp;
+        <label for="buyf2"><input type=checkbox class="checkbox-inline" name="buyf2" id="buyf2" value="Auction">&nbsp;Auction</label>&nbsp;&nbsp;
+        <label for="buyf3"><input type=checkbox class="checkbox-inline" name="buyf3" id="buyf3" value="Classified">&nbsp;Classified Ads</label>&nbsp;&nbsp;
+      </div>
+    </div>
+    <div class="form-group">
+      <label for="ifReturn" class="control-label col-sm-2">Seller:</label>
+      <div class="col-sm-10" id="ifReturn" style="padding-top:7px">
+        <label for="return"><input type=checkbox name="return" id="return" class="checkbox-inline">&nbsp; Return accepted </label>&nbsp;&nbsp;
+      </div>
+    </div>
+    <div class="form-group">
+      <label for="shipping" class="control-label col-sm-2">Shipping:</label>
+      <div class="col-sm-10" id="shipping" style="padding-top:7px">
+        <div class="form-group" id="shipping-div" style="margin-left:0px">
+          <label for="shipping1"><input type=checkbox class="checkbox-inline" name="shipping1" id="shipping1" value="true">&nbsp; Free Shippping</label>&nbsp;&nbsp;
+          <label for="shipping2"><input type=checkbox class="checkbox-inline" name="shipping2" id="shipping2" value="true">&nbsp; Expedited shipping</label>&nbsp;&nbsp;
+        </div>
+        <div class="form-group" style="margin:0px">
+          <input type="text" class="form-control" name="maxhandle" id="maxhandle" placeholder="Max handling time(days)">  
+        </div>
+      </div>
+    </div>
+    <div class="form-group">
+      <label for="dsort" class="control-label col-sm-2">Sort by:</label>
+      <div class="col-sm-10" id="dsort">
+        <SELECT name="sort" id="sort" class="form-control">
+          <OPTION value="BestMatch">Best Match
+          <OPTION value="CurrentPriceHighest">Price: highest first
+          <OPTION value="PricePlusShippingHighest">Price + Shipping: highest first
+          <OPTION value="PricePlusShippingLowest">Price + Shipping: lowest first
+        </SELECT>
+      </div>
+    </div>
+    <div class="form-group">
+      <label for="respp" class="control-label col-sm-2">Result Per Page:</label>
+      <div class="col-sm-10" id="respp">
+        <SELECT name="resnum" id="resnum" class="form-control"> 
+          <OPTION value="5">5
+          <OPTION value="10">10
+        </SELECT>
+      </div>
+    </div>
+    <div class="form-group" id="searchbtn">
+        <button name="clear" id="clear" type='button' class="btn btn-default">Clear</button>
+        <button name="submit" id="submit" class="btn btn-primary">Search</button>
+    </div>
+
+  </form>
+</div>
+
+<div><span class="sr-only">(result)</span>
+  <div id="updateArea"></div>
+  
+  <nav id="resultPagination" style="display:none">
+    <ul class="pagination">
+      <li class="disabled" id='resPage0' onclick=''>
+        <a href="#updateArea" aria-label="Previous"><span aria-hidden="true">&laquo;</span></a>
+      </li>
+      <li class="active" id='resPage1' onclick='' value='1'>
+        <a href="#updateArea">1<span class="sr-only">(current)</span></a>
+      </li>
+      <li class="" id='resPage2' onclick='pagePc(2)' value='2'><a href="#updateArea">2</a></li>
+      <li class="" id='resPage3' onclick='pagePc(3)' value='3'><a href="#updateArea">3</a></li>
+      <li class="" id='resPage4' onclick='pagePc(4)' value='4'><a href="#updateArea">4</a></li>
+      <li class="" id='resPage5' onclick='pagePc(5)' value='5'><a href="#updateArea">5</a></li>
+      <li class="" id='resPage6' onclick='pagePc(6)'>
+        <a href="#updateArea" aria-label="Next"><span aria-hidden="true">&raquo;</span></a>
+      </li>
+    </ul>
+  </nav>
+</div>
+
+
+<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+<script type="text/javaScript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+<!-- Include all compiled plugins (below), or include individual files as needed -->
+<script type="text/javaScript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+
+<script src="http://ajax.aspnetcdn.com/ajax/jquery.validate/1.13.1/jquery.validate.min.js"></script>
+
+<script src="validation.js"></script>
+
+
+</body>
+</html>

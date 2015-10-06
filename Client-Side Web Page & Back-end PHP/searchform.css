@@ -1,0 +1,91 @@
+body{
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+#headp img{
+    width: 100px;
+    vertical-align: top;
+}
+
+#searchbtn {
+    text-align: right;
+    margin: 0px;
+}
+
+#buyf label, #cond label, #ifReturn label, #shipping-div label {
+    font-weight: normal;
+}
+
+.media-left {
+    width: 20%;
+}
+
+.media-left img{
+    max-width: 80%;
+}
+
+.fb-to-post{
+    margin-bottom: -5px;
+    width: 20px;
+    height: 20px;
+}
+
+#resultPagination{
+    text-align: center;
+}
+
+label.error {
+    color: maroon;
+    font-weight: bold;
+}
+input.error{
+    border-color: maroon;
+}
+
+@media (max-width: 767px){
+    #searchbtn {
+        text-align: left;
+    }
+
+    .media-left {
+    width: 30%;
+    }
+
+    .media-left img{
+    max-width: 100%;
+    }
+
+}
+
+/*
+input[type=text] {
+	border-radius: 3px;
+	border: 1px solid silver;
+}
+
+input[type=checkbox] {
+	display: none;
+}
+
+input[type=checkbox] + label:before {
+    content: "";  
+    display: inline-block;  
+    width: 12px;  
+    height: 12px;  
+    margin-right: 8px; 
+    vertical-align: bottom;
+    margin-bottom: 3px;
+    border: 1px solid silver;
+    border-radius: 4px;  
+}
+
+input[type=checkbox]:checked + label:before {
+	content:"\2714";
+	color:black;
+	text-align:center;
+	line-height:12px;
+
+}
+
+*/
