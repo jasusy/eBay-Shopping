@@ -1,5 +1,5 @@
 # eBay-Shopping
-<a href="http://steveebaysearch.elasticbeanstalk.com"><b> Web & Android Development of eBay Searching-link</b></a> [Java, Android, PHP, HTML, JS, XML, JSON, AJAX] <br>
+<a href="http://steveebaysearch.elasticbeanstalk.com"><b> Web & Android Development of eBay Searching</b></a> [Java, Android, PHP, HTML, JS, XML, JSON, AJAX] <br>
 http://steveebaysearch.elasticbeanstalk.com/ <br>
 
 •	Built client-side pages with Bootstrap, with responsive, pagination & input validation, used Facebook API. <br>
