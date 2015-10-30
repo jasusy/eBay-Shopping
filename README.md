@@ -6,4 +6,6 @@
 •	Set up Ajax to invoke asynchronous connection to server-side back-end PHP on Amazon Web Services (AWS). <br>
 •	Built URL required by eBay API in PHP, requested XML, and generated JSON for front-end.<br>
 •	Developed an Android app doing same job, searching and displaying result, integrated with Facebook SDK. <br>
-•	Implemented multi- activity with AsyncTasks, fetching JSON/image from backend on AWS in android APP.<br>
+•	Implemented multi- activity with AsyncTasks, fetching JSON/image from backend on AWS in android APP.<br/>
+
+TO RUN: please remember to replace your own ebay api APP_NAME in php file, facebook app_id in js and java(android) files.
