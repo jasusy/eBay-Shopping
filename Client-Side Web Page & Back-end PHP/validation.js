@@ -86,7 +86,7 @@ function fbPost(key){
 //fb post part2
 window.fbAsyncInit = function() {
     FB.init({
-      appId      : '750095168444590',
+      appId      : 'your-app-id',
       xfbml      : true,
       version    : 'v2.3'
     });
