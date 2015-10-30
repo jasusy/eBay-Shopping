@@ -7,7 +7,7 @@
     <string name="price_to_str">Price To</string>
     <string name="sort_by_str">Sort by</string>
 
-    <string name="facebook_app_id">750095168444590</string>
+    <string name="facebook_app_id">replace_with_your_fb_app_id</string>
 
     <string-array name="sort_by_array">
         <item>Best Match</item>
