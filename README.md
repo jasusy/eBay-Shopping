@@ -8,4 +8,4 @@
 •	Developed an Android app doing same job, searching and displaying result, integrated with Facebook SDK. <br>
 •	Implemented multi- activity with AsyncTasks, fetching JSON/image from backend on AWS in android APP.<br/>
 
-TO RUN: please remember to replace your own ebay api APP_NAME in php file, facebook app_id in js and java(android) files.
+TO RUN: please remember to replace your own ebay api APP_NAME in php file, facebook app_id in js and string.xml(android) files.
