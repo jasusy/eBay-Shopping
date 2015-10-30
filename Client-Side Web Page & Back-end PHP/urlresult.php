@@ -4,7 +4,7 @@ define('EOL',(PHP_SAPI == 'cli') ? PHP_EOL : '<br />');
 	$keyword = ""; 
 	$resnum = 0;
 $i = 0;
-$apicall = "http://svcs.eBay.com/services/search/FindingService/v1?siteid=0&OPERATION-NAME=findItemsAdvanced&SERVICE-VERSION=1.0.0&REST-PAYLOAD=true&SECURITY-APPNAME=USCe88a42-5100-40a7-87f5-a9f4e0ad7ea&RESPONSE-DATA-FORMAT=XML&outputSelector[0]=SellerInfo&outputSelector[1]=PictureURLSuperSize&outputSelector[2]=StoreInfo";
+$apicall = "http://svcs.eBay.com/services/search/FindingService/v1?siteid=0&OPERATION-NAME=findItemsAdvanced&SERVICE-VERSION=1.0.0&REST-PAYLOAD=true&SECURITY-APPNAME=((REPLACE_HERE_AND_TWO_PARETHESIS_WITH_YOUR_APPNAME))&RESPONSE-DATA-FORMAT=XML&outputSelector[0]=SellerInfo&outputSelector[1]=PictureURLSuperSize&outputSelector[2]=StoreInfo";
 if(isset($_GET['keyword'])) {
 	$keyword = $_GET['keyword'];
 	$apicall = $apicall . "&keywords=" . urlencode($_GET['keyword']);
